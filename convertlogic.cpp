@@ -74,12 +74,40 @@ std::string ConvertLogic::formatBinary64(uint64_t bits) {
 
 std::string ConvertLogic::formatHex32(uint32_t bits) {
     std::stringstream ss;
-    ss << "0x" << std::hex << std::uppercase << std::setfill('0') << std::setw(8) << bits;
-    return ss.str();
+    // ss << "0x" << std::hex << std::uppercase << std::setfill('0') << std::setw(8) << bits;
+    // return ss.str();
+    // 先生成8位补0的纯十六进制字符串（无0x、无分隔）
+    ss << std::hex << std::uppercase << std::setfill('0') << std::setw(8) << bits;
+    std::string hexStr = ss.str();
+    std::string result = "0x"; // 前缀
+
+    // 每两位插入一个空格，末尾不加空格
+    for (int i = 0; i < hexStr.size(); i += 2) {
+        result += hexStr.substr(i, 2);
+        // 最后一组（7-8位）后不加分隔符
+        if (i != hexStr.size() - 2) {
+            result += " ";
+        }
+    }
+    return result;
 }
 
 std::string ConvertLogic::formatHex64(uint64_t bits) {
     std::stringstream ss;
-    ss << "0x" << std::hex << std::uppercase << std::setfill('0') << std::setw(16) << bits;
-    return ss.str();
+    // ss << "0x" << std::hex << std::uppercase << std::setfill('0') << std::setw(16) << bits;
+    // return ss.str();
+    // 先生成16位补0的纯十六进制字符串（无0x、无分隔）
+    ss << std::hex << std::uppercase << std::setfill('0') << std::setw(16) << bits;
+    std::string hexStr = ss.str();
+    std::string result = "0x"; // 前缀
+
+    // 每两位插入一个空格，末尾不加空格
+    for (int i = 0; i < hexStr.size(); i += 2) {
+        result += hexStr.substr(i, 2);
+        // 最后一组（15-16位）后不加分隔符
+        if (i != hexStr.size() - 2) {
+            result += " ";
+        }
+    }
+    return result;
 }
