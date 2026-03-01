@@ -56,6 +56,18 @@ std::string ConvertLogic::formatBinary64(uint64_t bits) {
         result.append(((bits >> i) & 1) ? "1" : "0");
         if (i == 63) result.append(" ");
         if (i == 52) result.append(" ");
+        if (i == 48) result.append(" ");
+        if (i == 44) result.append(" ");
+        if (i == 40) result.append(" ");
+        if (i == 36) result.append(" ");
+        if (i == 32) result.append(" ");
+        if (i == 28) result.append(" ");
+        if (i == 24) result.append(" ");
+        if (i == 20) result.append(" ");
+        if (i == 16) result.append(" ");
+        if (i == 12) result.append(" ");
+        if (i == 8) result.append(" ");
+        if (i == 4) result.append(" ");
     }
     return result;
 }
