@@ -1,6 +1,7 @@
 #include "convertlogic.h"
 #include <cstring>
 #include <iomanip>
+#include <sstream>
 
 ConvertLogic::ConvertLogic() {}
 
