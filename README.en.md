@@ -1,0 +1,60 @@
+# Decimal to IEEE-754 Conversion Tool
+
+A Qt-based graphical tool for converting decimal fractions into IEEE 754 standard floating-point representations (single-precision Float32 and double-precision Float64).
+
+## Features
+
+- **Single-precision floating-point (Float32)** conversion: 32-bit IEEE 754 single-precision format
+- **Double-precision floating-point (Float64)** conversion: 64-bit IEEE 754 double-precision format
+- Supports binary and hexadecimal output formats
+- Graphical user interface with simple and intuitive operation
+
+## Project Structure
+
+```
+├── CMakeLists.txt       # CMake build configuration file
+├── convertlogic.cpp     # Conversion logic implementation
+├── convertlogic.h       # Conversion logic header file
+├── main.cpp             # Program entry point
+├── mainwindow.cpp       # Main window implementation
+└── mainwindow.h         # Main window header file
+```
+
+## Core Technologies
+
+- **Qt**: Graphical user interface framework
+- **C++**: Programming language
+- **IEEE 754**: Floating-point representation standard
+
+## Dependencies
+
+- Qt 5.x or higher
+- C++11 standards-compliant compiler
+
+## Build Instructions
+
+```bash
+# Build using CMake
+mkdir build
+cd build
+cmake ..
+make
+```
+
+## Usage
+
+1. Run the program
+2. Select the conversion type (single-precision or double-precision)
+3. Enter a decimal value
+4. Click the "Calculate" button
+5. View the results (binary and hexadecimal representations)
+
+## Conversion Logic
+
+The program converts decimal floating-point numbers into IEEE 754 format:
+- **Float32 (Single-precision)**: 1 sign bit + 8 exponent bits + 23 mantissa bits
+- **Float64 (Double-precision)**: 1 sign bit + 11 exponent bits + 52 mantissa bits
+
+## License
+
+MIT License
