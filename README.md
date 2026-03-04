@@ -2,6 +2,8 @@
 
 # Decimal to IEEE-754 转换工具
 
+> 本README由Gitee AI辅助生成。
+
 一个基于 Qt 的图形界面工具，用于将十进制小数转换为 IEEE 754 标准的浮点数表示（单精度 Float32 和双精度 Float64）。
 
 ## 功能特性
